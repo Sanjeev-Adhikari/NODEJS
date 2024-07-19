@@ -1,24 +1,26 @@
-//console.log("welcome to nodejs")
+const app = require("express")()
 
-// array
+//old way(alternative)
+//const express = require("express")
+//const app = expess()
 
+app.get("/", (req,res) =>{
 
-const numbers = [10,20,30,40,50]
-//console.log(numbers[1])
+    res.send("Hello, Welcome to programming")
+})
 
-const person = ["sanjeev", "anand", "aman", "anuj"]
+app.get("/contact", (req,res)=>{
+    //res.send("Here is my contact page")
 
-//console.log(person[0])
+    res.json({
+        message: "Here is the json format"
+    })
+})
 
-//Object
+app.get("/about", (req,res)=>{
+    res.send("here is the about page")
+})
 
-const names = {
-    name : "sanjeev",
-    age : 25,
-    status : "unmarried"
-
-}
-
-//console.log("His name is " + names.name, "he is " + names.age, "and he is " + names.status)
-
-//Checking....
+app.listen(2000, (req,res)=>{
+    console.log("Node js has started at port 2000")
+})
