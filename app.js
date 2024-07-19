@@ -19,4 +19,6 @@ const names = {
 
 }
 
-console.log("His name is " + names.name, "he is " + names.age, "and he is " + names.status)
+//console.log("His name is " + names.name, "he is " + names.age, "and he is " + names.status)
+
+//Checking....
