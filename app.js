@@ -6,19 +6,23 @@ const app = require("express")()
 
 app.get("/", (req,res) =>{
 
-    res.send("Hello, Welcome to programming")
+    res.json({
+        message: "Here is the home page"
+    })
 })
 
 app.get("/contact", (req,res)=>{
     //res.send("Here is my contact page")
 
     res.json({
-        message: "Here is the json format"
+        message: "This is the content of contact page"
     })
 })
 
 app.get("/about", (req,res)=>{
-    res.send("here is the about page")
+    res.json({
+        message: "This is the about page"
+    })
 })
 
 app.listen(2000, (req,res)=>{
